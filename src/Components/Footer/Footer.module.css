@@ -1,0 +1,290 @@
+.footer {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem 0;
+  margin-top: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.brand h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.brand p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.copyright p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.heart {
+  color: #e53e3e;
+  display: inline-flex;
+  align-items: center;
+  animation: heartbeat 1.5s ease-in-out infinite;
+  font-size: 1rem;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* ENHANCED RESPONSIVE DESIGN */
+
+/* Extra small devices (320px to 479px) */
+@media (max-width: 479.98px) {
+  .footer {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .content {
+    gap: 1.5rem;
+  }
+
+  .brand h3 {
+    font-size: 1.125rem;
+    line-height: 1.1;
+  }
+
+  .brand p {
+    font-size: 0.85rem;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+
+  .copyright p {
+    flex-direction: column;
+    gap: 0.25rem;
+    line-height: 1.3;
+  }
+
+  .heart {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small devices (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767.98px) {
+  .footer {
+    padding: 2.25rem 0;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .content {
+    gap: 1.75rem;
+  }
+
+  .brand h3 {
+    font-size: 1.25rem;
+  }
+
+  .brand p {
+    font-size: 0.9rem;
+  }
+
+  .copyright {
+    font-size: 0.85rem;
+  }
+
+  .copyright p {
+    gap: 0.375rem;
+  }
+}
+
+/* Medium devices (768px to 991px) - Tablets */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .footer {
+    padding: 2.5rem 0;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  .brand h3 {
+    font-size: 1.375rem;
+  }
+
+  .brand p {
+    font-size: 0.95rem;
+  }
+
+  .copyright {
+    font-size: 0.875rem;
+  }
+}
+
+/* Large devices (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .footer {
+    padding: 2.75rem 0;
+  }
+
+  .brand h3 {
+    font-size: 1.4375rem;
+  }
+
+  .brand p {
+    font-size: 0.975rem;
+  }
+}
+
+/* Extra large devices (1200px+) */
+@media (min-width: 1200px) {
+  .footer {
+    padding: 3rem 0;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .brand h3 {
+    font-size: 1.5rem;
+  }
+
+  .brand p {
+    font-size: 1rem;
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (max-width: 767.98px) {
+  /* Better touch-friendly spacing */
+  .content {
+    padding: 0 1rem;
+  }
+
+  /* Ensure text remains readable */
+  .brand,
+  .copyright {
+    word-break: break-word;
+    hyphens: auto;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (orientation: landscape) and (max-height: 500px) {
+  .footer {
+    padding: 1.5rem 0;
+  }
+
+  .content {
+    gap: 1rem;
+  }
+
+  .brand h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .brand p {
+    font-size: 0.8rem;
+  }
+
+  .copyright {
+    font-size: 0.75rem;
+  }
+
+  .copyright p {
+    gap: 0.25rem;
+  }
+
+  .heart {
+    font-size: 0.8rem;
+  }
+}
+
+/* High-DPI displays */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min--moz-device-pixel-ratio: 2),
+       only screen and (-o-min-device-pixel-ratio: 2/1),
+       only screen and (min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 192dpi),
+       only screen and (min-resolution: 2dppx) {
+  .footer {
+    border-top-width: 0.5px;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .heart {
+    animation: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .footer {
+    background: white;
+    color: black;
+    border-top: 1px solid #ccc;
+    padding: 1rem 0;
+  }
+
+  .brand h3 {
+    color: black !important;
+    -webkit-text-fill-color: black !important;
+  }
+
+  .brand p,
+  .copyright,
+  .copyright p {
+    color: black !important;
+  }
+
+  .heart {
+    color: #666 !important;
+  }
+} 

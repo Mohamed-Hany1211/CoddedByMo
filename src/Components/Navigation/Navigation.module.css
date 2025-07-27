@@ -1,0 +1,428 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Increased from 999 to ensure it's above other content */
+  padding: 1rem 0;
+  background: rgba(13, 15, 23, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  will-change: transform, background-color;
+}
+
+.navigation.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.navigation.scrolled {
+  background: rgba(13, 15, 23, 0.95);
+  backdrop-filter: blur(25px);
+  padding: 0.5rem 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  /* Better touch target */
+  min-height: 44px;
+  justify-content: center;
+  /* Touch optimization */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.logoSubtext {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  margin-top: -2px;
+  line-height: 1.2;
+}
+
+.desktopNav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  /* Better touch targets */
+  min-height: 44px;
+  /* Touch optimization */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.navItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50px;
+}
+
+.navItem:hover::before,
+.navItem.active::before {
+  opacity: 1;
+}
+
+.navItem:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.navItem.active {
+  color: #fff;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+  border: 1px solid rgba(102, 126, 234, 0.4);
+}
+
+.navIcon {
+  font-size: 1.1rem;
+}
+
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.75rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  /* Better touch target */
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Touch optimization */
+  -webkit-tap-highlight-color: rgba(102, 126, 234, 0.3);
+  touch-action: manipulation;
+}
+
+.mobileMenuBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.mobileMenuBtn:active {
+  transform: scale(0.95);
+  background: rgba(102, 126, 234, 0.2);
+}
+
+.mobileNav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(13, 15, 23, 0.98);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
+  overflow: hidden;
+  /* Enhanced shadow for mobile menu */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.mobileNavItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.25rem 2rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  /* Better touch target */
+  min-height: 56px;
+  /* Touch optimization */
+  -webkit-tap-highlight-color: rgba(102, 126, 234, 0.3);
+  touch-action: manipulation;
+  position: relative;
+}
+
+.mobileNavItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
+}
+
+.mobileNavItem:hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: #fff;
+  padding-left: 2.5rem;
+}
+
+.mobileNavItem:hover::before,
+.mobileNavItem.active::before {
+  width: 4px;
+}
+
+.mobileNavItem.active {
+  background: rgba(102, 126, 234, 0.2);
+  color: #fff;
+}
+
+.mobileNavItem.active::before {
+  width: 4px;
+}
+
+/* ENHANCED RESPONSIVE DESIGN */
+
+/* Extra small devices (320px to 479px) */
+@media (max-width: 479.98px) {
+  .navigation {
+    padding: 0.75rem 0;
+  }
+
+  .navigation.scrolled {
+    padding: 0.5rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .logoText {
+    font-size: 1.125rem;
+  }
+
+  .logoSubtext {
+    font-size: 0.625rem;
+  }
+
+  .mobileMenuBtn {
+    font-size: 1.375rem;
+    padding: 0.625rem;
+  }
+
+  .mobileNavItem {
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .mobileNavItem:hover {
+    padding-left: 2rem;
+  }
+}
+
+/* Small devices (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767.98px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .logoText {
+    font-size: 1.25rem;
+  }
+
+  .logoSubtext {
+    font-size: 0.7rem;
+  }
+}
+
+/* Medium devices and up (768px+) - Desktop Navigation */
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .mobileMenuBtn {
+    display: none !important;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  .logoText {
+    font-size: 1.5rem;
+  }
+
+  .logoSubtext {
+    font-size: 0.75rem;
+  }
+
+  /* Enhanced hover effects for desktop */
+  .navItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+  }
+}
+
+/* Large devices (992px+) */
+@media (min-width: 992px) {
+  .desktopNav {
+    gap: 2.5rem;
+  }
+
+  .navItem {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+  }
+}
+
+/* Extra large devices (1200px+) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Mobile-only styles */
+@media (max-width: 767.98px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileMenuBtn {
+    display: flex;
+  }
+
+  /* Disable hover effects on touch devices */
+  .navItem:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Enhanced mobile menu animation */
+  .mobileNav {
+    animation: slideDown 0.3s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Tablet specific adjustments */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .desktopNav {
+    gap: 1.5rem;
+  }
+
+  .navItem {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* High-DPI displays */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min--moz-device-pixel-ratio: 2),
+       only screen and (-o-min-device-pixel-ratio: 2/1),
+       only screen and (min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 192dpi),
+       only screen and (min-resolution: 2dppx) {
+  .navigation {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (orientation: landscape) and (max-height: 500px) {
+  .navigation {
+    padding: 0.5rem 0;
+  }
+
+  .logoText {
+    font-size: 1.125rem;
+  }
+
+  .logoSubtext {
+    display: none;
+  }
+
+  .mobileNavItem {
+    padding: 0.875rem 2rem;
+    min-height: 44px;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .navItem,
+  .mobileNavItem,
+  .mobileMenuBtn {
+    transition: none;
+  }
+
+  .navItem:hover {
+    transform: none;
+  }
+
+  .mobileNav {
+    animation: none;
+  }
+} 
