@@ -77,64 +77,94 @@ const Projects = () => {
   const defaultProjects = [
     {
       id: 1,
-      title: "E-Commerce API",
-      description: "A robust REST API built with Node.js and Express.js, featuring user authentication, product management, shopping cart functionality, and payment integration with Stripe.",
+      title: "Task Management System",
+      description: "Developed a comprehensive Node.js task management system designed as a collaborative productivity platform with user registration and email verification, Implemented customizable task organization with three category types (To Do, In Progress, Done) and flexible task visibility options (public/private), Built secure authentication system using JWT tokens, integrated Cloudinary for user profile image storage, and implemented MongoDB for data persistence, Created full CRUD operations with pagination functionality, enabling both personal task organization and public task sharing for collaborative workflows",
       type: "backend",
-      technologies: ["Node.js", "Express.js", "MongoDB", "Redis", "Stripe API"],
-      githubLink: "https://github.com/mohamedhany/ecommerce-api",
+      technologies: ["Node.js", "JavaScript", "Express.js", "MongoDB"],
+      githubLink: "https://github.com/Mohamed-Hany1211/Tech-Summit-Task",
       liveLink: null,
       images: [],
       featured: true,
-      longDescription: "Complete e-commerce backend solution with microservices architecture, Redis caching, JWT authentication, and comprehensive API documentation.",
-      techIconNames: ['SiNodedotjs', 'SiExpress', 'SiMongodb', 'SiRedis']
+      longDescription: "Comprehensive Node.js task management system designed as a collaborative productivity platform with user registration and email verification, customizable task organization with three category types (To Do, In Progress, Done) and flexible task visibility options (public/private), secure authentication system using JWT tokens, integrated Cloudinary for user profile image storage, and MongoDB for data persistence with full CRUD operations and pagination functionality.",
+      techIconNames: ['SiNodedotjs', 'SiJavascript', 'SiExpress', 'SiMongodb']
     },
     {
       id: 2,
-      title: "React Task Manager",
-      description: "A modern task management application built with React.js, featuring drag-and-drop functionality, real-time updates, and responsive design.",
-      type: "frontend",
-      technologies: ["React.js", "TypeScript", "Framer Motion", "CSS Modules"],
-      githubLink: "https://github.com/mohamedhany/react-task-manager",
-      liveLink: "https://task-manager-demo.vercel.app",
-      images: [
-        "https://via.placeholder.com/800x600/667eea/ffffff?text=Task+Manager+1",
-        "https://via.placeholder.com/800x600/764ba2/ffffff?text=Task+Manager+2",
-        "https://via.placeholder.com/800x600/10b981/ffffff?text=Task+Manager+3"
-      ],
-      featured: false,
-      longDescription: "Feature-rich task management application with drag & drop, real-time collaboration, and advanced filtering capabilities.",
-      techIconNames: ['SiReact', 'SiTypescript']
+      title: "E-commerce Backend API (in progress)",
+      description: "Built comprehensive e-commerce backend API using Node.js, Express, and MongoDB with full CRUD operations, Implemented user authentication, product catalog management, and shopping cart functionality, Integrated Stripe payment processing, coupon system, and role-based access control, Developed order processing workflows and comprehensive API documentation",
+      type: "backend",
+      technologies: ["Node.js", "JavaScript", "Express.js", "MongoDB"],
+      githubLink: "https://github.com/Mohamed-Hany1211/ecommerce-dev",
+      liveLink: null,
+      images: [],
+      featured: true,
+      longDescription: "Comprehensive e-commerce backend API using Node.js, Express, and MongoDB with full CRUD operations, user authentication, product catalog management, shopping cart functionality, Stripe payment processing, coupon system, role-based access control, and order processing workflows with comprehensive API documentation.",
+      techIconNames: ['SiNodedotjs', 'SiJavascript', 'SiExpress', 'SiMongodb']
     },
     {
       id: 3,
-      title: "Social Media Platform",
-      description: "Full-stack social media application with real-time messaging, post sharing, and user interactions. Built with the MERN stack.",
-      type: "fullstack",
-      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io"],
-      githubLink: "https://github.com/mohamedhany/social-platform",
-      liveLink: "https://social-platform-demo.herokuapp.com",
-      images: [
-        "https://via.placeholder.com/800x600/667eea/ffffff?text=Social+Platform+1",
-        "https://via.placeholder.com/800x600/764ba2/ffffff?text=Social+Platform+2"
-      ],
+      title: "Fresh Cart- E-commerce Web Application",
+      description: "Developed a comprehensive online shopping platform using React with modern development practices, Implemented user authentication, product management, and cart functionality using React hooks, Integrated payment processing and utilized Context API for state management, Built responsive user interface with seamless RESTful API integration",
+      type: "frontend",
+      technologies: ["React", "JavaScript", "HTML5", "CSS3"],
+      githubLink: "https://github.com/Mohamed-Hany1211/Fresh_Cart",
+      liveLink: null,
+      images: [],
       featured: true,
-      longDescription: "Complete social media platform with real-time chat, image uploads, user profiles, and advanced privacy settings.",
-      techIconNames: ['SiReact', 'SiNodedotjs', 'SiExpress', 'SiMongodb']
+      longDescription: "Comprehensive online shopping platform using React with modern development practices, user authentication, product management, and cart functionality using React hooks, payment processing integration, Context API for state management, and responsive user interface with seamless RESTful API integration.",
+      techIconNames: ['SiReact', 'SiJavascript', 'FiCode', 'FiCode']
     },
     {
       id: 4,
-      title: "DevOps Dashboard",
-      description: "A comprehensive dashboard for monitoring microservices, built with React and connected to various monitoring APIs.",
-      type: "frontend",
-      technologies: ["React.js", "D3.js", "Docker", "Cloud Services"],
-      githubLink: "https://github.com/mohamedhany/devops-dashboard",
-      liveLink: "https://devops-dashboard-demo.netlify.app",
-      images: [
-        "https://via.placeholder.com/800x600/667eea/ffffff?text=DevOps+Dashboard"
-      ],
-      featured: false,
-      longDescription: "Real-time monitoring dashboard with custom charts, alerting system, and integration with popular DevOps tools.",
-      techIconNames: ['SiReact', 'SiDocker', 'FiCloud']
+      title: "Job Board Platform",
+      description: "Created a comprehensive job board platform connecting employers with job seekers, Implemented functionality for employers to post job listings and manage applications, Built job search and application features for job seekers with filtering capabilities, Developed user authentication and role-based access for different user type",
+      type: "backend",
+      technologies: ["Node.js", "JavaScript", "Express.js", "MongoDB"],
+      githubLink: "https://github.com/Mohamed-Hany1211/job_board",
+      liveLink: null,
+      images: [],
+      featured: true,
+      longDescription: "Comprehensive job board platform connecting employers with job seekers, functionality for employers to post job listings and manage applications, job search and application features for job seekers with filtering capabilities, user authentication and role-based access for different user types.",
+      techIconNames: ['SiNodedotjs', 'SiJavascript', 'SiExpress', 'SiMongodb']
+    },
+    {
+      id: 5,
+      title: "Upvote Community Platform",
+      description: "Developed a community-driven platform where users can express approval through voting mechanisms, Implemented content ranking system based on community upvotes and engagement, Built user interaction features to promote community participation and content discovery, Created responsive design with real-time voting updates and content popularity trackin",
+      type: "backend",
+      technologies: ["Node.js", "JavaScript", "Express.js", "MongoDB"],
+      githubLink: "https://github.com/Mohamed-Hany1211/upVote",
+      liveLink: null,
+      images: [],
+      featured: true,
+      longDescription: "Community-driven platform where users can express approval through voting mechanisms, content ranking system based on community upvotes and engagement, user interaction features to promote community participation and content discovery, responsive design with real-time voting updates and content popularity tracking.",
+      techIconNames: ['SiNodedotjs', 'SiJavascript', 'SiExpress', 'SiMongodb']
+    },
+    {
+      id: 6,
+      title: "Moktashif– AI-Powered Cybersecurity Web Application (Frontend)",
+      description: "Developed Moktashif, an automated vulnerability web scanner that analyzes websites by taking their URLs and scanning them to identify security vulnerabilities. The system employs two distinct scanning approaches: the first utilizes Nuclei templates for comprehensive vulnerability detection, while the second leverages three specialized AI agents to identify potential security flaws. Both approaches send raw vulnerability data to a search agent that categorizes findings and provides detailed vulnerability descriptions, remediation steps, risk levels, and additional learning resources. Built a full-stack React application featuring automated vulnerability scanning, AI chatbot integration for cybersecurity consultation, interactive dashboards with data visualization, and secure user authentication, Integrated a specialized cybersecurity chatbot that exclusively answers cybersecurity-related questions, providing expert consultation and guidance to users, Implemented PDF report generation and comprehensive security analysis capabilities for web applications and infrastructure assessment",
+      type: "fullstack",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS", "React"],
+      githubLink: "https://github.com/MoktashifAI/Moktashif-front-end",
+      liveLink: null,
+      images: [],
+      featured: true,
+      longDescription: "AI-Powered Cybersecurity Web Application featuring automated vulnerability web scanner that analyzes websites by taking their URLs and scanning them to identify security vulnerabilities. The system employs two distinct scanning approaches: Nuclei templates for comprehensive vulnerability detection and specialized AI agents. Built with React application featuring automated vulnerability scanning, AI chatbot integration for cybersecurity consultation, interactive dashboards with data visualization, secure user authentication, specialized cybersecurity chatbot, and PDF report generation with comprehensive security analysis capabilities.",
+      techIconNames: ['FiCode', 'FiCode', 'SiJavascript', 'FiCode', 'SiReact']
+    },
+    {
+      id: 7,
+      title: "Moktashif– AI-Powered Cybersecurity Web Application (Backend)",
+      description: "Developed Moktashif, an automated vulnerability web scanner that analyzes websites by taking their URLs and scanning them to identify security vulnerabilities. The system employs two distinct scanning approaches: the first utilizes Nuclei templates for comprehensive vulnerability detection, while the second leverages three specialized AI agents to identify potential security flaws. Both approaches send raw vulnerability data to a search agent that categorizes findings and provides detailed vulnerability descriptions, remediation steps, risk levels, and additional learning resources. Built a full-stack React application featuring automated vulnerability scanning, AI chatbot integration for cybersecurity consultation, interactive dashboards with data visualization, and secure user authentication, Developed comprehensive backend using Node.js, Express, and MongoDB with user authentication, automated vulnerability scanning through external APIs, AI-powered threat analysis, scan history management, and secure file uploads with Cloudinary integration, Integrated a specialized cybersecurity chatbot that exclusively answers cybersecurity-related questions, providing expert consultation and guidance to users, Implemented PDF report generation and comprehensive security analysis capabilities for web applications and infrastructure assessment",
+      type: "fullstack",
+      technologies: ["Node.js", "JavaScript", "Express.js", "MongoDB"],
+      githubLink: "https://github.com/MoktashifAI/Moktashef-back-end",
+      liveLink: null,
+      images: [],
+      featured: true,
+      longDescription: "AI-Powered Cybersecurity Web Application backend featuring automated vulnerability web scanner with two distinct scanning approaches: Nuclei templates and specialized AI agents. Comprehensive backend using Node.js, Express, and MongoDB with user authentication, automated vulnerability scanning through external APIs, AI-powered threat analysis, scan history management, secure file uploads with Cloudinary integration, specialized cybersecurity chatbot, and PDF report generation with comprehensive security analysis capabilities.",
+      techIconNames: ['SiNodedotjs', 'SiJavascript', 'SiExpress', 'SiMongodb']
     }
   ];
 

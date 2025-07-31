@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { FiGithub, FiLinkedin, FiDownload, FiArrowDown } from 'react-icons/fi';
 import { SiReact, SiNodedotjs, SiMongodb, SiExpress } from 'react-icons/si';
-import resumePDF from '../../assets/mohamed_hany_resume (7).pdf';
+import resumePDF from '../../assets/mohamed_hany_resume.pdf';
 import profileImage from '../../assets/me.jpg';
 import styles from './Hero.module.css';
 
